@@ -24,7 +24,7 @@ function App() {
     };
 
     try {
-      const res = await fetch("http://localhost:3001/users", settings);
+      const res = await fetch("https://git.heroku.com/gest1-backend.git/users", settings);
       if (res.ok) {
         return res.json();
       }
@@ -35,7 +35,7 @@ function App() {
 
   const getUsers = async () => {
     try{
-      const res = await fetch("http://localhost:3001/users");
+      const res = await fetch("https://git.heroku.com/gest1-backend.git/users");
       const data = await res.json();
       if (res.okay) {
         setUsersList(data);
